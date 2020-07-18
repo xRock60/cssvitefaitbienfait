@@ -4962,23 +4962,59 @@ img[src="static/forums/locked_read.png"] {
   }
 }
 
-/* Site Logo */
+* Site Logo */
 .site-logo {
   position: relative;
-  top: 20px;
-  background: url("https://i.imgur.com/38qylDb.png") top center no-repeat;
-  width: 700px;
-  height: 124px;
-  margin: 0 auto 20px auto;
+  top: 0;
+  width: 100%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  height: auto;
+  margin: 0 auto -1.4rem;
 }
-
+.site-logo__link:after {
+  font-family: "Bebas Neue", Helvetica, Tahoma, Geneva, sans-serif;
+  content: "PassThePopcorn";
+  font-size: 6rem;
+  display: block;
+  margin: 0 auto;
+  text-align: center !important;
+  background-color: #4281da;
+  background-image: linear-gradient(
+    90deg,
+    #e66534 4%,
+    #e69734 19%,
+    #e2d956 39%,
+    #62e080 60%,
+    #d195cb 80%,
+    #e646dd 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: brightness(110%);
+  filter: brightness(110%);
+  text-shadow: 0 0 15px rgba(230, 101, 52, 0.55);
+  transition: all 0.3s;
+}
+.site-logo__link:hover:after {
+  text-shadow: 0 0 25px rgba(230, 101, 52, 0.55);
+  -webkit-filter: brightness(120%);
+  filter: brightness(120%);
+}
 .site-logo__link {
   display: block;
-  width: 700px;
-  height: 124px;
-  margin-top: 8px;
+  width: 100%;
+  height: auto;
+  margin-top: 2.5rem;
   border: none;
-  
+}
+.site-logo,
+.site-logo__link,
+.site-logo__link:after {
+  word-wrap: normal;
+  white-space: nowrap;
 }
 
 /****************************************************************************
